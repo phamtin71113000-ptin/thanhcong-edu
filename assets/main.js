@@ -9,14 +9,14 @@
 
   // map route name -> page path
   const routeToPath = {
-    'home': 'pages/home.html',
-    'gioi-thieu': 'pages/gioi-thieu.html',
-    'khoa-hoc': 'pages/khoa-hoc.html',
-    'lich-khai-giang': 'pages/lich-khai-giang.html',
-    'tin-tuc': 'pages/tin-tuc.html',
-    'cam-nhan': 'pages/cam-nhan.html',
-    'dang-ky': 'pages/dang-ky.html',
-    'lien-he': 'pages/lien-he.html'
+    'home': 'thanhcong-edu/pages/home.html',
+    'gioi-thieu': 'thanhcong-edu/pages/gioi-thieu.html',
+    'khoa-hoc': 'thanhcong-edu/pages/khoa-hoc.html',
+    'lich-khai-giang': 'thanhcong-edu/pages/lich-khai-giang.html',
+    'tin-tuc': 'thanhcong-edu/pages/tin-tuc.html',
+    'cam-nhan': 'thanhcong-edu/pages/cam-nhan.html',
+    'dang-ky': 'thanhcong-edu/pages/dang-ky.html',
+    'lien-he': 'thanhcong-edu/pages/lien-he.html'
   };
 
   // load page via fetch and inject into #content
@@ -105,4 +105,5 @@
   const observer = new MutationObserver(() => attachNavHandlers());
   observer.observe(content, {childList:true, subtree:true});
 })();
+
 
