@@ -1,0 +1,29 @@
+<section>
+  <h2>Đăng ký học</h2>
+  <p class="muted">Điền thông tin, chúng tôi sẽ liên hệ trong ngày.</p>
+  <div class="card" style="margin-top:1rem">
+    <form id="formSignup" class="form">
+      <div style="display:grid;gap:0.75rem;grid-template-columns:1fr 1fr">
+        <div><label>Họ và tên<input name="name" required></label></div>
+        <div><label>Số điện thoại<input name="phone" required></label></div>
+      </div>
+      <div style="display:grid;gap:0.75rem;grid-template-columns:1fr 1fr;margin-top:.6rem">
+        <div><label> Cấp học <select name="cap"><option>Tiểu học</option><option>THCS</option><option>THPT</option></select></label></div>
+        <div><label> Môn <select name="mon"><option>Toán</option><option>Vật lý</option><option>Hóa</option><option>Tiếng Anh</option><option>Ngữ văn</option></select></label></div>
+      </div>
+      <div style="margin-top:.6rem"><label>Email (không bắt buộc)<input name="email" type="email"></label></div>
+      <div style="margin-top:.6rem"><label>Ghi chú<textarea name="note" rows="4"></textarea></label></div>
+      <div style="margin-top:.8rem"><button class="btn-primary" type="submit">Gửi đăng ký</button></div>
+    </form>
+  </div>
+
+  <script>
+    // simple client-side form demo (this script will be executed when the page is loaded into #content)
+    document.getElementById('formSignup')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      alert('Đăng ký thành công!\\n' + JSON.stringify(data,null,2));
+      e.target.reset();
+    });
+  </script>
+</section>
